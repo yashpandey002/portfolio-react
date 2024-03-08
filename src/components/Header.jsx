@@ -15,7 +15,7 @@ export default function Header() {
                             <a
                                 href="https://twitter.com/pandeyyash_"
                                 target="_blank"
-                                className="md:text-lg lg:text-xl text-lightGrey"
+                                className="md:text-lg lg:text-xl text-lightGrey hover:text-[#1da1f2] duration-300"
                             >
                                 <ion-icon
                                     name="logo-twitter"
@@ -29,7 +29,7 @@ export default function Header() {
                             <a
                                 href="https://www.linkedin.com/in/pandeyyash"
                                 target="_blank"
-                                className="text-lightGrey md:text-lg lg:text-xl"
+                                className="text-lightGrey md:text-lg lg:text-xl hover:text-[#0077b5] duration-300"
                             >
                                 <ion-icon
                                     name="logo-linkedin"
@@ -43,7 +43,7 @@ export default function Header() {
                             <a
                                 href="https://github.com/yashpandey002"
                                 target="_blank"
-                                className="text-lightGrey md:text-lg lg:text-xl"
+                                className="text-lightGrey md:text-lg lg:text-xl hover:text-[#2da44e] duration-300"
                             >
                                 <ion-icon
                                     name="logo-github"
@@ -56,7 +56,7 @@ export default function Header() {
                         <li>
                             <a
                                 href="#projects"
-                                className="text-lightGrey font-[700] text-base md:text-lg"
+                                className="text-lightGrey font-[700] text-base md:text-lg hover:text-white duration-300"
                             >
                                 Projects
                             </a>
@@ -65,7 +65,7 @@ export default function Header() {
                             <a
                                 href="https://drive.google.com/file/d/1uVy-jLyuU4KGvITdoj83zPoq5fq1wVgJ/view?usp=sharing"
                                 target="_blank"
-                                className=" text-lightGrey font-[700] text-base flex items-center md:text-lg"
+                                className="text-lightGrey font-[700] text-base flex items-center md:text-lg hover:text-white duration-300"
                             >
                                 Resume
                                 <span>
