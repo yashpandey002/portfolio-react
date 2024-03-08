@@ -6,7 +6,10 @@ export default function HomeScreen() {
         <>
             <Header />
             <main>
-                <section className="px-4 min-[375px]:px-6 md:px-8 min-[1100px]:px-0">
+                <section
+                    id="hero-section"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1100px]:px-0 pb-20 md:pb-32"
+                >
                     <div className="max-w-[1100px] mx-auto">
                         <div className="mb-4 sm:mb-[18px] lg:mb-[20px]">
                             <h2 className="flex items-center justify-between text-sm text-white min-[375px]:justify-normal min-[375px]:gap-4 lg:gap-8 font-[700]">
@@ -65,6 +68,92 @@ export default function HomeScreen() {
                                         alt="Moving arrow pointing towards button"
                                     />
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    id="techstack-section"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-20"
+                >
+                    <div className="max-w-[1200px] mx-auto">
+                        <div className="mb-4 sm:mb-8 lg:mb-10">
+                            <h2 className="text-lightGrey text-3xl font-[700] sm:text-4xl md:text-6xl">
+                                My{" "}
+                                <span className="text-gradient">
+                                    Tech-stack
+                                </span>
+                            </h2>
+                        </div>
+                        <div>
+                            <div className="flex flex-wrap gap-5 mb-4 sm:mb-6">
+                                <img
+                                    src="./javascript.svg"
+                                    alt="Javascript"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./react.svg"
+                                    alt="React"
+                                    className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./express.svg"
+                                    alt="Express"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./mongo-db.svg"
+                                    alt="MongoDb"
+                                    className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./node.svg"
+                                    alt="Node"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./tailwind.svg"
+                                    alt="Tailwind"
+                                    className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./sass.svg"
+                                    alt="SCSS"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                            </div>
+                            <div className="flex flex-wrap gap-4">
+                                <img
+                                    src="./html.svg"
+                                    alt="HTML"
+                                    className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./css.svg"
+                                    alt="CSS"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./npm.svg"
+                                    alt="NPM"
+                                    className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./github.svg"
+                                    alt="Github"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./git.svg"
+                                    alt="Git"
+                                    className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
+                                <img
+                                    src="./figma.svg"
+                                    alt="Figma"
+                                    className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
+                                />
                             </div>
                         </div>
                     </div>

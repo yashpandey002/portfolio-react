@@ -79,3 +79,33 @@ html {
         transform: translateY(-50px);
     }
 }
+
+.floatingAnimationMedium {
+    animation: floatingMedium 2s infinite alternate ease-in-out;
+}
+.floatingAnimationLow {
+    animation: floatingLow 1s infinite alternate ease-in-out;
+}
+
+@keyframes floatingMedium {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes floatingLow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
