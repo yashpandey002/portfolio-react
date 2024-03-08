@@ -65,7 +65,7 @@ export default function Header() {
                             <a
                                 href="https://drive.google.com/file/d/1uVy-jLyuU4KGvITdoj83zPoq5fq1wVgJ/view?usp=sharing"
                                 target="_blank"
-                                className="text-lightGrey font-[700] text-base flex items-center md:text-lg"
+                                className=" text-lightGrey font-[700] text-base flex items-center md:text-lg"
                             >
                                 Resume
                                 <span>

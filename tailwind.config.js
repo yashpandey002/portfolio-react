@@ -5,6 +5,11 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         fontFamily: {
+            openSans: [
+                "Open Sans",
+                "sans-serif",
+                ...defaultTheme.fontFamily.sans,
+            ],
             sans: ["Urbanist", "sans-serif", ...defaultTheme.fontFamily.sans],
         },
         colors: {
