@@ -5,7 +5,7 @@ export default function Header() {
         <header className="px-3 pt-5 pb-14 sm:pb-16 lg:pb-20 min-[375px]:px-6 min-[375px]:pt-6 md:px-8 md:pt-10 lg:pt-12">
             <nav className="flex items-center justify-between">
                 <div>
-                    <a className="text-[32px] inline-block no-underline cursor-pointer font-[700] text-lightGrey min-[375px]:text-[34px] sm:text-[36px]">
+                    <a className="text-[32px] inline-block no-underline cursor-pointer font-[700] text-lightGrey min-[375px]:text-[34px] sm:text-[36px] hover:text-white transition-colors duration-300">
                         YP()
                     </a>
                 </div>
@@ -55,7 +55,7 @@ export default function Header() {
                         </li>
                         <li>
                             <a
-                                href="#projects"
+                                href="#projects-section"
                                 className="text-lightGrey font-[700] text-base md:text-lg hover:text-white duration-300"
                             >
                                 Projects

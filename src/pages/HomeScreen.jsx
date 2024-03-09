@@ -1,7 +1,70 @@
 import React from "react";
 import Header from "../components/Header";
+import ProjectCard from "../components/ProjectCard";
 
 export default function HomeScreen() {
+    const projects = [
+        {
+            projectId: 1,
+            projectName: "Yash-Server",
+            skillsUsed: [
+                "MERN stack",
+                "React state management",
+                "REST API",
+                "CORS",
+                "Tailwind CSS",
+                "Validation with ZOD",
+            ],
+            projectDesc:
+                "A Full-stack application for adding and viewing user profiles, built using MERN stack.",
+            githubLink: "https://github.com/yashpandey002/yash-server",
+            liveLink: "https://yash-server.netlify.app/",
+            imgSrc: "./yash-server-screen.png",
+        },
+        {
+            projectId: 2,
+            projectName: "Resume-Builder",
+            skillsUsed: ["React", "React state management", "React Components"],
+            projectDesc:
+                "A Form-based Resume builder built using React thatto helps building tech resume quickly.",
+            githubLink: "https://github.com/yashpandey002/resume-builder",
+            liveLink: "https://tech-resume-builder-by-yash-pandey.vercel.app/",
+            imgSrc: "./buildResume-screen.png",
+        },
+        {
+            projectId: 3,
+            projectName: "Etch-a-Sketch",
+            skillsUsed: [
+                "Vanilla Javascript",
+                "Complex Mouse Events",
+                "DOM manipulation",
+                "Dynamic Grid",
+                "Different color modes",
+            ],
+            projectDesc:
+                "Browser version of something between a sketchpad and an Etch-A-Sketch. Built with Vanilla Javascript.",
+            githubLink: "https://github.com/yashpandey002/esketch",
+            liveLink: "https://yashpandey002.github.io/esketch/",
+            imgSrc: "./esketch-screen.png",
+        },
+        {
+            projectId: 4,
+            projectName: "Rock Paper Scissors",
+            skillsUsed: [
+                "Vanilla Javascript",
+                "DOM manipulation",
+                "Game logic",
+            ],
+            projectDesc:
+                "The classic game of Rock Paper Scissors, built using Vanilla Javascript can be played against Computer.",
+            githubLink:
+                "https://github.com/yashpandey002/rock-paper-scissors-game",
+            liveLink:
+                "https://yashpandey002.github.io/rock-paper-scissors-game/",
+            imgSrc: "./rps-screen.png",
+        },
+    ];
+
     return (
         <>
             <Header />
@@ -57,7 +120,7 @@ export default function HomeScreen() {
                                         community.
                                     </p>
                                     <a
-                                        href="#projects"
+                                        href="#projects-section"
                                         className="cta-primary inline-block px-4 py-3 uppercase rounded-md cta-primary-bg font-[700] text-white text-base lg:text-lg lg:py-5 lg:px-7 relative z-10 rotate-[0] md:rotate-[-3deg]"
                                     >
                                         See my projects
@@ -86,7 +149,7 @@ export default function HomeScreen() {
                             </h2>
                         </div>
                         <div>
-                            <div className="flex flex-wrap gap-5 mb-4 sm:mb-6">
+                            <div className="flex flex-wrap gap-5 mb-4 sm:mb-6 md:gap-8">
                                 <img
                                     src="./javascript.svg"
                                     alt="Javascript"
@@ -112,13 +175,13 @@ export default function HomeScreen() {
                                     alt="Node"
                                     className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
                                 />
+                            </div>
+                            <div className="flex flex-wrap gap-4 md:gap-8">
                                 <img
                                     src="./tailwind.svg"
                                     alt="Tailwind"
                                     className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
                                 />
-                            </div>
-                            <div className="flex flex-wrap gap-4">
                                 <img
                                     src="./sass.svg"
                                     alt="SCSS"
@@ -158,13 +221,29 @@ export default function HomeScreen() {
                         </div>
                     </div>
                 </section>
-                <section id="projects-section">
+                <section
+                    id="projects-section"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-16 md:pb-32"
+                >
                     <div className="max-w-[1200px] mx-auto">
-                        <div className="mb-4 sm:mb-8 lg:mb-10">
+                        <div className="mb-6 sm:mb-8 md:mb-12 lg:mb-16">
                             <h2 className="text-lightGrey text-3xl font-[700] sm:text-4xl md:text-6xl">
                                 <span className="text-gradient">Projects</span>{" "}
                                 I worked on
                             </h2>
+                        </div>
+                        <div className="flex flex-col gap-12 md:gap-20 lg:gap-32">
+                            {projects.map((project) => (
+                                <ProjectCard
+                                    key={project.projectId}
+                                    projectName={project.projectName}
+                                    projectDesc={project.projectDesc}
+                                    githubLink={project.githubLink}
+                                    liveLink={project.liveLink}
+                                    imgSrc={project.imgSrc}
+                                    skillsUsed={project.skillsUsed}
+                                />
+                            ))}
                         </div>
                     </div>
                 </section>
