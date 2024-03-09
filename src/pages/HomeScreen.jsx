@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
 
 export default function HomeScreen() {
+    const [emailCopyStatus, setEmailCopyStatus] = useState("");
+    const emailRef = useRef(null);
+    const email = "pandeyyash002@gmail.com";
+
+    const copyEmailToClipboard = () => {
+        navigator.clipboard.writeText(email);
+        setEmailCopyStatus("Email copied");
+    };
+
+    const handleEmailButtonClick = () => {
+        copyEmailToClipboard();
+        setTimeout(() => setEmailCopyStatus(""), 3000); // Clear status after 3 seconds
+    };
+
     const projects = [
         {
             projectId: 1,
@@ -223,7 +238,7 @@ export default function HomeScreen() {
                 </section>
                 <section
                     id="projects-section"
-                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-16 md:pb-32"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 mb-20 md:mb-32"
                 >
                     <div className="max-w-[1200px] mx-auto">
                         <div className="mb-6 sm:mb-8 md:mb-12 lg:mb-16">
@@ -247,7 +262,66 @@ export default function HomeScreen() {
                         </div>
                     </div>
                 </section>
+                <section
+                    id="contact-section"
+                    className="relative mb-20 md:mb-32 lg:mb-40"
+                >
+                    <div className="w-[90%] md:w-[80%] bg-gradient mx-auto rounded-lg px-5 py-8 md:px-8 md:py-10 lg:px-0 lg:py-0">
+                        <div className="flex">
+                            <div className="lg:py-16 lg:pl-16">
+                                <h2 className="text-3xl font-[800] text-white sm:text-4xl lg:text-7xl mb-2">
+                                    Let&apos;s Be In Touch
+                                </h2>
+                                <p className="mb-8 text-base text-white font-openSans lg:max-w-[400px]">
+                                    I&apos;m open to hearing about new
+                                    opportunities. Feel free to reach out to me
+                                    via{" "}
+                                    <a
+                                        href="https://twitter.com/pandeyyash_"
+                                        target="_blank"
+                                    >
+                                        <strong>Twitter</strong>
+                                    </a>{" "}
+                                    or{" "}
+                                    <a
+                                        href="https://www.linkedin.com/in/pandeyyash/"
+                                        target="_blank"
+                                    >
+                                        <strong>Linkedin</strong>
+                                    </a>{" "}
+                                    if you have a question, or just want to say
+                                    hi!
+                                </p>
+                                <button
+                                    className="w-[100%] py-2 text-white border border-white relative email-btn pl-4 min-[375px]:pl-[30px] sm:w-[50%] lg:w-[300px] contact__email hover:border-[#592c42] transition-colors duration-300"
+                                    ref={emailRef}
+                                    onClick={handleEmailButtonClick}
+                                >
+                                    <ion-icon
+                                        name="mail-outline"
+                                        role="img"
+                                        class="md hydrated absolute top-[50%] translate-y-[-50%] left-[5px] min-[375px]:left-[10px]"
+                                        aria-label="mail outline"
+                                    ></ion-icon>
+                                    pandeyyash002@gmail.com
+                                    <span className="hide-with-animation contact__email-cta">
+                                        {emailCopyStatus ||
+                                            "Click to Copy Email"}
+                                    </span>
+                                </button>
+                            </div>
+                            <div className="hidden ml-auto lg:flex">
+                                <img
+                                    src="./contact-illustration.svg"
+                                    alt="Man chatting with friends"
+                                    className="self-end"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
+            <Footer />
         </>
     );
 }
