@@ -8,7 +8,7 @@ export default function HomeScreen() {
             <main>
                 <section
                     id="hero-section"
-                    className="px-4 min-[375px]:px-6 md:px-8 min-[1100px]:px-0 pb-20 md:pb-32"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1100px]:px-0 pb-16 md:pb-32"
                 >
                     <div className="max-w-[1100px] mx-auto">
                         <div className="mb-4 sm:mb-[18px] lg:mb-[20px]">
@@ -74,7 +74,7 @@ export default function HomeScreen() {
                 </section>
                 <section
                     id="techstack-section"
-                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-20"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-16 md:pb-32"
                 >
                     <div className="max-w-[1200px] mx-auto">
                         <div className="mb-4 sm:mb-8 lg:mb-10">
@@ -117,13 +117,13 @@ export default function HomeScreen() {
                                     alt="Tailwind"
                                     className="skill-icon floatingAnimationMedium h-[25px] sm:h-[35px] lg:h-[50px]"
                                 />
+                            </div>
+                            <div className="flex flex-wrap gap-4">
                                 <img
                                     src="./sass.svg"
                                     alt="SCSS"
                                     className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
                                 />
-                            </div>
-                            <div className="flex flex-wrap gap-4">
                                 <img
                                     src="./html.svg"
                                     alt="HTML"
@@ -155,6 +155,16 @@ export default function HomeScreen() {
                                     className="skill-icon floatingAnimationLow h-[25px] sm:h-[35px] lg:h-[50px]"
                                 />
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="projects-section">
+                    <div className="max-w-[1200px] mx-auto">
+                        <div className="mb-4 sm:mb-8 lg:mb-10">
+                            <h2 className="text-lightGrey text-3xl font-[700] sm:text-4xl md:text-6xl">
+                                <span className="text-gradient">Projects</span>{" "}
+                                I worked on
+                            </h2>
                         </div>
                     </div>
                 </section>
