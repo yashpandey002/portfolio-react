@@ -86,7 +86,7 @@ export default function HomeScreen() {
             <main>
                 <section
                     id="hero-section"
-                    className="px-4 min-[375px]:px-6 md:px-8 min-[1100px]:px-0 pb-16 md:pb-32"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1100px]:px-0 pb-20 md:pb-32"
                 >
                     <div className="max-w-[1100px] mx-auto">
                         <div className="mb-4 sm:mb-[18px] lg:mb-[20px]">
@@ -152,10 +152,10 @@ export default function HomeScreen() {
                 </section>
                 <section
                     id="techstack-section"
-                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-16 md:pb-32"
+                    className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 pb-20 md:pb-32"
                 >
                     <div className="max-w-[1200px] mx-auto">
-                        <div className="mb-4 sm:mb-8 lg:mb-10">
+                        <div className="mb-6 sm:mb-8 lg:mb-10">
                             <h2 className="text-lightGrey text-4xl font-[700] md:text-6xl">
                                 My{" "}
                                 <span className="text-gradient">
@@ -241,13 +241,13 @@ export default function HomeScreen() {
                     className="px-4 min-[375px]:px-6 md:px-8 min-[1200px]:px-0 mb-20 md:mb-32"
                 >
                     <div className="max-w-[1200px] mx-auto">
-                        <div className="mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+                        <div className="mb-8 md:mb-12 lg:mb-16">
                             <h2 className="text-lightGrey font-[700] text-4xl md:text-6xl">
                                 <span className="text-gradient">Projects</span>{" "}
                                 I worked on
                             </h2>
                         </div>
-                        <div className="flex flex-col gap-12 md:gap-20 lg:gap-32">
+                        <div className="flex flex-col gap-20 md:gap-20 lg:gap-32">
                             {projects.map((project) => (
                                 <ProjectCard
                                     key={project.projectId}
